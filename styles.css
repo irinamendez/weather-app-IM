@@ -1,0 +1,72 @@
+body {
+  padding-top: 80px;
+}
+.card {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.city {
+  font-size: 40px;
+  font-family: "New Tegomin", serif;
+}
+
+.month {
+  font-size: 20px;
+  font-family: "New Tegomin", serif;
+}
+.maindegree {
+  font-size: 90px;
+  font-family: "New Tegomin", serif;
+  color: black;
+  padding: 50px 20px;
+  margin-left: 180px;
+  margin-top: 10px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+.degree-letters {
+  font-size: 30px;
+  position: relative;
+  padding: 50px 20px;
+  margin-left: 280px;
+  margin-top: 35px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+.high {
+  font-size: 25px;
+  color: #fb7777;
+}
+.low {
+  color: #00bbf0;
+  font-size: 25px;
+}
+.cloud {
+  font-size: 20px;
+  font-family: "New Tegomin", serif;
+  margin-top: 10px;
+  margin-left: 43px;
+}
+
+.weather-details {
+  font-size: 20px;
+  font-family: "New Tegomin", serif;
+  list-style: none;
+  position: relative;
+  padding: 150px;
+  margin-left: 300px;
+  margin-top: 120px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+.system {
+  margin-left: 55px;
+}
+.days {
+  font-size: 20px;
+  font-family: "New Tegomin", serif;
+}
