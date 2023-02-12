@@ -34,14 +34,14 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
+
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
-
-let iconElement = document.querySelector("#icon");
-
-iconElement.setAttribute(
-  "src",
-  `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png`
-);
 
 function search(city) {
   let apiKey = "1b80baf3de41c148obta7e8509c2d194";
