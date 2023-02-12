@@ -11,6 +11,11 @@ body {
   font-family: "New Tegomin", serif;
 }
 
+.text {
+  font-size: 20px;
+  font-family: "New Tegomin", serif;
+}
+
 .month {
   font-size: 20px;
   font-family: "New Tegomin", serif;
@@ -49,6 +54,9 @@ body {
   font-family: "New Tegomin", serif;
   margin-top: 10px;
   margin-left: 25px;
+}
+
+.cloud:first-letter {
   text-transform: capitalize;
 }
 

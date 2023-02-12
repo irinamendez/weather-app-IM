@@ -1,23 +1,5 @@
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
-let month = currentTime.getMonth();
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let date = currentTime.getDate();
-let year = currentTime.getFullYear();
 let day = currentTime.getDay();
 let days = [
   "Sunday",
@@ -38,7 +20,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-dateElement.innerHTML = `${months[month]} ${date}, ${year} | ${days[day]}, ${hours}:${minutes}`;
+dateElement.innerHTML = `${days[day]}, ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#your-city").innerHTML = response.data.city;
