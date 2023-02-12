@@ -36,6 +36,14 @@ function displayWeatherCondition(response) {
     response.data.condition.description;
 }
 
+let iconElement = document.querySelector("#icon");
+console.log(response);
+
+iconElement.setAttribute(
+  "src",
+  `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png`
+);
+
 function search(city) {
   let apiKey = "1b80baf3de41c148obta7e8509c2d194";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
