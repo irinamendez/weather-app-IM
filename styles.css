@@ -48,7 +48,8 @@ body {
   font-size: 20px;
   font-family: "New Tegomin", serif;
   margin-top: 10px;
-  margin-left: 43px;
+  margin-left: 25px;
+  text-transform: capitalize;
 }
 
 .weather-details {

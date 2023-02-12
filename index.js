@@ -41,21 +41,22 @@ if (minutes < 10) {
 dateElement.innerHTML = `${months[month]} ${date}, ${year} | ${days[day]}, ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
-  document.querySelector("#your-city").innerHTML = response.data.name;
+  document.querySelector("#your-city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
 }
 
 function search(city) {
-  let apiKey = "842b36d55cb28eba74a018029d56b04c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiKey = "1b80baf3de41c148obta7e8509c2d194";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
