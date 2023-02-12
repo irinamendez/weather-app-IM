@@ -37,7 +37,6 @@ function displayWeatherCondition(response) {
 }
 
 let iconElement = document.querySelector("#icon");
-console.log(response);
 
 iconElement.setAttribute(
   "src",
