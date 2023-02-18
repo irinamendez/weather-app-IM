@@ -12,15 +12,14 @@ let days = [
 ];
 
 let hours = currentTime.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
 let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
+let ampm = hours >= 12 ? "pm" : "am";
+hours = hours % 12;
+hours = hours ? hours : 12;
+minutes = minutes < 10 ? "0" + minutes : minutes;
+let formattedTime = hours + ":" + minutes + " " + ampm;
 
-dateElement.innerHTML = `${days[day]}, ${hours}:${minutes}`;
+dateElement.innerHTML = `${days[day]}, ${formattedTime}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
