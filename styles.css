@@ -91,6 +91,12 @@ body {
 .days {
   font-size: 20px;
   font-family: "New Tegomin", serif;
+  margin-left: 45px;
+}
+
+.lower-tem {
+  font-size: 17px;
+  opacity: 0.5;
 }
 .repo {
   text-align: center;

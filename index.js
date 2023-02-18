@@ -22,6 +22,28 @@ if (minutes < 10) {
 
 dateElement.innerHTML = `${days[day]}, ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Sat", "Fri", "Sun", "Mon", "Tue"];
+
+  days.forEach(function (day) {
+    forecastHTML = `${forecastHTML} 
+    <div class="col-1" style="text-align: center; padding: 5px; margin: 30px; margin-top: 10px; margin-bottom: 10px">
+                  ${day}
+                   🌤
+                   73°
+                   <div class="lower-tem">73°</div>
+                </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#your-city").innerHTML = response.data.city;
 
@@ -86,3 +108,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 search("San Francisco");
+
+displayForecast();
