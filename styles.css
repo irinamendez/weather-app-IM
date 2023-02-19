@@ -36,6 +36,11 @@ body {
   text-decoration: none;
 }
 
+.degree-letters .active {
+  color: black;
+  cursor: default;
+}
+
 #celsius-link {
   text-decoration: none;
 }
